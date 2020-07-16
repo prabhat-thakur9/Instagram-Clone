@@ -11,7 +11,7 @@ mongoose.connect(MONGO_URI,{
 
 })
 mongoose.connection.on('connected',()=>{
-    console.log("conneted to mongo yeahh")
+    console.log("MONGO DB CONNECTED")
 })
 mongoose.connection.on('error',(err)=>{
     console.log("err connecting",err)
@@ -35,5 +35,5 @@ if(process.env.NODE_ENV=="production"){
 }
 
 app.listen(PORT,()=>{
-    console.log("server is running on",PORT)
+    console.log("Server is running on",PORT)
 })
